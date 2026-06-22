@@ -1,8 +1,11 @@
 function Searchbar() {
   return (
     <div className="searchbar">
-      <input type="text" placeholder="Search for a city..." />
-      <button>Search</button>
+      {/* <input  type="text"  value={city}      onChange={(e) => setCity(e.target.value)}
+        placeholder="Enter city"
+      />
+
+      <button>Search</button> */}
     </div>
   );
 }
