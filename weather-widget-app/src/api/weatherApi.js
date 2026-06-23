@@ -16,3 +16,19 @@ export async function getWeather(city) {
 
   return response.data;
 }
+
+export async function getWeatherByCoordinates(lat, lon) {
+  const response = await axios.get(
+    "https://api.openweathermap.org/data/2.5/weather",
+    {
+      params: {
+        lat: lat,
+        lon: lon,
+        appid: API_KEY,
+        units: "metric"
+      }
+    }
+  );
+
+  return response.data;
+}
