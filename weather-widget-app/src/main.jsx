@@ -3,11 +3,17 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
+import { TemperatureProvider } from './context/TemperatureContext'
+import { ThemeProvider } from './context/ThemeContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <TemperatureProvider>
+          <App />
+        </TemperatureProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   </StrictMode>,
 )

@@ -1,3 +1,11 @@
+a{
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+a:hover{
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
 .weather-card {
   max-width: 400px;
   border-radius: 24px;
@@ -45,6 +53,7 @@
   font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.5px;
+
 }
 
 .description {
@@ -60,6 +69,40 @@
   height: 100px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
   animation: float 3s ease-in-out infinite;
+}
+
+.favorite-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.favorite-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.favorite-button.favorited {
+  background: rgba(255, 255, 100, 0.4);
+  border-color: rgba(255, 255, 100, 0.8);
+  color: #ffff00;
+  box-shadow: 0 0 15px rgba(255, 255, 100, 0.5);
+}
+
+.favorite-button.favorited:hover {
+  background: rgba(255, 255, 100, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 100, 0.7);
 }
 
 @keyframes float {
@@ -89,9 +132,8 @@
 }
 
 .celsius {
-  font-size: 32px;
+
   font-weight: 600;
-  margin-top: 8px;
   opacity: 0.9;
 }
 
@@ -174,11 +216,17 @@
   }
 
   .celsius {
-    font-size: 24px;
+    /* font-size: 24px; */
   }
 
   .city-name {
     font-size: 24px;
+  }
+
+  .favorite-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 
   .weather-details {

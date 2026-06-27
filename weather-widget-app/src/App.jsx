@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import {
   Routes,
-  Route
+  Route,
+  useNavigate
 } from "react-router-dom";
 
 
@@ -14,11 +15,15 @@ import Favorites from "./pages/Favorites";
 import CityDetails from "./pages/CityDetails";
 import NotFound from "./pages/NotFound";
 function App() {
+  const navigate = useNavigate();
 
+  const handleSearch = (city) => {
+    navigate("/", { state: { searchCity: city } });
+  };
 
   return (
     <>
-     <Navbar />
+     <Navbar onSearch={handleSearch} />
      <Routes>
        <Route path="/" element={<Home />} />
        <Route path="/favorites" element={<Favorites />} />

@@ -1,0 +1,271 @@
+.navbar {
+  display: flex;
+  gap: 16px;
+  padding: 16px 32px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar-brand h5 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-links a:hover {
+  color: var(--accent);
+}
+
+.searchbar {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.navbar-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.theme-selector {
+  position: relative;
+}
+
+.theme-toggle-button {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.theme-toggle-button:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+}
+
+.theme-icon {
+  font-size: 16px;
+}
+
+.theme-label {
+  font-size: 12px;
+}
+
+.theme-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  z-index: 1000;
+  min-width: 150px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.theme-option {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.theme-option:hover {
+  background-color: var(--bg-secondary);
+}
+
+.theme-option.active {
+  background-color: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.theme-option-icon {
+  font-size: 16px;
+}
+
+.temperature-toggle {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.toggle-button {
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.toggle-button:hover {
+  border-color: var(--accent-bg);
+  background: var(--accent-bg);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  transform: scale(1.05);
+}
+
+.toggle-label {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.toggle-indicator {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.toggle-indicator.celsius {
+  background: rgba(100, 200, 255, 0.4);
+  color: #64c8ff;
+}
+
+.toggle-indicator.fahrenheit {
+  background: rgba(255, 150, 100, 0.4);
+  color: #ff9664;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 24px;
+    gap: 12px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 20px;
+  }
+
+  .navbar-brand h5 {
+    font-size: 11px;
+  }
+
+  .searchbar {
+    min-width: 150px;
+    max-width: 300px;
+  }
+
+  .toggle-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .navbar-brand {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchbar {
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+  }
+
+  .navbar-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 18px;
+  }
+
+  .navbar-brand h5 {
+    font-size: 10px;
+  }
+
+  .toggle-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .toggle-label {
+    font-size: 10px;
+  }
+}
