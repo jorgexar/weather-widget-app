@@ -1,85 +1,60 @@
-Project Overview
+# 🌤️ Weather Widget Application
 
-This Weather Widget Application is a React-based project that allows users to search for real-time weather data by city name using the OpenWeatherMap API. The application displays current weather conditions including temperature, humidity, wind speed, and descriptive weather states with dynamic icons.
+An intuitive, React-based dashboard that delivers real-time weather data by city name using the **OpenWeatherMap API**. The application features a responsive design, dynamic icons, and personalized user settings.
 
-Users can:
+---
 
-Search for any city’s current weather
-View detailed weather information
-Save and remove favorite cities (persisted in local storage)
-Toggle between Celsius and Fahrenheit units
-Switch between light and dark themes
-Navigate between pages using React Router (Home, Favorites, City Details, 404 page)
+## ✨ Core Features
 
-The project demonstrates the use of React fundamentals, hooks, context API, routing, state management, and testing practices.
+*   🔍 **Global Search:** Fetch current weather for any city instantly.
+*   📊 **Detailed Insights:** View real-time temperature, humidity, wind speed, and weather conditions.
+*   ⭐ **Favorites Management:** Save and remove favorite cities (seamlessly persisted via Local Storage).
+*   🌡️ **Unit Toggle:** Switch between Celsius and Fahrenheit on the fly.
+*   🌙 **Theme Customization:** Toggle between Light and Dark modes.
+*   🛤️ **Smooth Navigation:** Multi-page experience powered by React Router (*Home, Favorites, City Details, and a custom 404 Page*).
 
-🚀 How to Run the Project Locally
-1. Clone the repository
+> **Tech Stack Highlights:** Built to demonstrate mastery of React fundamentals, modern Hooks, Context API, client-side routing, advanced state management, and robust testing practices.
+
+---
+
+## 🚀 How to Run the Project Locally
+
+Follow these steps to get your development environment up and running:
+
+### 1. Clone & Navigate
+```bash
 git clone git@github.com:jorgexar/weather-widget-app.git
-2. Navigate into the project folder
 cd weather-widget-app
-3. Install dependencies
+
+```
+
+### 2. Install Dependencies
+```Bash
 npm install
-4. Add environment variables
+```
+### 3. Configure Environment Variables
 
-Create a .env file in the root directory:
+Create a .env file in the root directory of the project and add your API key:
+```
 
-VITE_OPEN_WEATHER_API_KEY=your_api_key_here
+VITE_API_KEY=your_api_key_here
+```
+    ⚠️ Note: The variable must start with VITE_ to be properly recognized and loaded by Vite.
 
-Make sure the variable starts with VITE_ since this is required by Vite.
-
-5. Start the development server
+### 4. Start the server
+```
 npm run dev
+```
 
-The app will run at:
+Once started, open your browser and navigate to: http://localhost:5173
 
-http://localhost:5173
-🧪 How to Run the Test Suite
+## 🧪 Testing Suite
 
-This project uses Vitest + React Testing Library.
+This project utilizes **Vitest** combined with **React Testing Library** for a modern, blazing-fast test experience.
 
-Run tests:
-npm test
+### Running Tests
 
-or (depending on config):
-
-npx vitest
-Run tests in watch mode:
-npm test -- --watch
-What is tested:
-Component rendering (WeatherCard, SearchBar, etc.)
-User interactions (search, favorites, toggles)
-Async API behavior (mocked OpenWeatherMap calls)
-Conditional UI states (loading and error handling)
-🧠 State Management Approach
-
-This project uses a hybrid state management approach:
-
-1. React Context API
-
-Used for global UI-related state:
-
-Temperature unit (Celsius/Fahrenheit)
-Theme (light/dark)
-Shared toggle functions
-
-Context was chosen because these values are:
-
-Used across multiple components
-Lightweight and do not require complex logic
-2. Local Component State (useState / useEffect)
-
-Used for:
-
-Weather data fetched per search
-Loading and error states
-Input handling
-3. Local Storage Persistence
-
-Used to persist:
-
-Favorite cities
-Last searched city
-User preferences (theme/unit)
-
-This ensures data remains available after page reloads.
+| Command | Description |
+| :--- | :--- |
+| `npm test` *or* `npx vitest` | Run the full test suite once |
+| `npm test -- --watch` | Run tests in interactive watch mode |
