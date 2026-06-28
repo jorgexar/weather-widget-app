@@ -42,10 +42,10 @@ function Navbar({ onSearch }) {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
+      <Link to="/"><div className="navbar-brand">
         <h1>Zephyr</h1>
         <h5>Weather Widget App</h5>
-      </div>
+      </div></Link>
 
       <div className="navbar-links">
         <Link to="/">Home</Link>

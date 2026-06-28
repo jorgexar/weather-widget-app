@@ -27,7 +27,7 @@ function Searchbar({ onSearch, isLoading }) {
         placeholder="Search city..."
         disabled={isLoading}
       />
-      <button onClick={handleSearch} disabled={isLoading}>
+      <button onClick={handleSearch} disabled={isLoading} role="search-button">
         {isLoading ? "..." : "Search"}
       </button>
     </div>

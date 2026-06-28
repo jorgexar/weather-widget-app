@@ -77,6 +77,7 @@ function WeatherCard({ weather, onFavoriteRemoved }) {
           <p className="description">{weather.weather[0].description}</p>
         </div>
         <button 
+        aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
           className={`favorite-button ${isFavorited ? 'favorited' : ''}`}
           onClick={toggleFavorite}
           title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
