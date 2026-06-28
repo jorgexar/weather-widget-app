@@ -58,3 +58,30 @@ This project utilizes **Vitest** combined with **React Testing Library** for a m
 | :--- | :--- |
 | `npm test` *or* `npx vitest` | Run the full test suite once |
 | `npm test -- --watch` | Run tests in interactive watch mode |
+
+### What is Covered:
+*   **Component Rendering:** Assures UI pieces like `WeatherCard` and `SearchBar` mount correctly.
+*   **User Interactions:** Validates search submissions, favorite toggles, and unit switching.
+*   **Async API Behavior:** Features fully mocked OpenWeatherMap API responses for reliable testing.
+*   **Conditional UI States:** Ensures robust error handling and loading states are gracefully displayed.
+
+---
+
+## 🧠 State Management Architecture
+
+The application uses a strategic, hybrid approach to state management, pairing the right tool with the right job:
+
+### 1. React Context API
+Handles global, UI-wide state that cuts across the component tree.
+*   **Stored Data:** Temperature unit (Celsius/Fahrenheit), Theme preference (Light/Dark), and their respective toggle functions.
+*   **Why?** Keeps lightweight, app-wide preferences synchronized without the overhead of Redux.
+
+### 2. Local Component State (`useState` / `useEffect`)
+Handles isolated, component-specific lifecycles.
+*   **Stored Data:** Fetched weather data per search, loading/error states, and form input controls.
+*   **Why?** Prevents unnecessary global re-renders and keeps component logic self-contained.
+
+### 3. Local Storage Persistence
+Bridges the gap between sessions.
+*   **Stored Data:** Favorite cities list, the last searched city, and user UI configurations.
+*   **Why?** Ensures user data and preferences survive page reloads and browser restarts.
