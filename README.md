@@ -28,10 +28,22 @@ cd weather-widget-app
 
 ```
 
-### 2. Install Dependencies
-```Bash
+### 2. Install project dependencies
+
+This project uses **npm**. Install all required dependencies listed in the `package.json` file by running:
+
+```bash
 npm install
 ```
+
+This will install all required packages, including:
+- React
+- React Router
+- Axios
+- Vitest
+- React Testing Library
+- Vite
+- Any other project dependencies
 ### 3. Configure Environment Variables
 
 Create a .env file in the root directory of the project and add your API key:
