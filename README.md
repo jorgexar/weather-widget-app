@@ -73,7 +73,7 @@ This project utilizes **Vitest** combined with **React Testing Library** for a m
 
 ### What is Covered:
 *   **Component Rendering:** Assures UI pieces like `WeatherCard` and `SearchBar` mount correctly.
-*   **User Interactions:** Validates search submissions, favorite toggles, and unit switching.
+*   **User Interactions:** Validates search submissions, favorite toggles.
 *   **Async API Behavior:** Features fully mocked OpenWeatherMap API responses for reliable testing.
 *   **Conditional UI States:** Ensures robust error handling and loading states are gracefully displayed.
 
